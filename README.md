@@ -1,2 +1,5 @@
 # LightningTalks
-Real quick presentations I am able to give to a small group of people
+I don't mind talking to people. I know some random bits of information that might be useful to people sometimes.
+
+### Talks
+[virtualenv](./virtualenv)
