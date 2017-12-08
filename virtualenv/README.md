@@ -26,6 +26,8 @@ to install these packages, you would run
 pip install -r requirements.txt
 ```
 
+* * *
+
 ### How do I get started
 Installation:
 ```sh
