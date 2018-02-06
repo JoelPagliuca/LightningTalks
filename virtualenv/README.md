@@ -1,5 +1,7 @@
 # Virtualenv
 
+_note: python -> python2, pip -> pip2_
+
 ### Annoying and common Python problems
 * > I want to run these two Django web apps, but they both use a different version of Django
 * > I use Linux and I'm sick of typing my password in for every `pip install`
