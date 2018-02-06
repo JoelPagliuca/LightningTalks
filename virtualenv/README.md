@@ -4,13 +4,14 @@
 * > I want to run these two Django web apps, but they both use a different version of Django
 * > I use Linux and I'm sick of typing my password in for every `pip install`
 * > I don't want to install heaps of junk packages for every random tool I want to use and clutter up my system
+* > Uhh, this pentesting tool is kinda weird and doesn't work when I try to install it on my host
 
 ### How can we fix them
 `virtualenv` - [docs](https://virtualenv.pypa.io/en/stable/)
 
 This module lets you create a new clean Python environment for each project
 
-### Side note on Python projects
+### Quick side note on Python projects
 Most (basically all) Python projects will have a file `requirements.txt`.
 
 This will list all pip packages required to run the project. e.g. 
@@ -38,7 +39,7 @@ Create a virtual environment:
 ```sh
 virtualenv venv
 ```
-(_note: `--no-site-packages` is deprecated_)
+(_note: `--no-site-packages` is deprecated_, old Stack Overflow answers might use that)
 
 Now activate the environment:
 ```sh
