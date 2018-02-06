@@ -44,6 +44,8 @@ Now activate the environment:
 ```sh
 source venv/bin/activate
 ```
+(or `activate.fish` if you use `fish`)
+
 Now you'll see the name of the current virtualenv in your terminal
 
 ### Let's see what we can do
@@ -60,11 +62,11 @@ pip freeze	# look at the installed packages
 # check to see if nosetests is on our path
 nosetests
 echo $PATH	# should include venv/bin
-ls venv/bin/	# python2.7 pip2.7 nosetests
+ls venv/bin/	# note: python2.7 pip2.7 nosetests
 ```
 now let's switch environment
 ```sh
-deactivate
+deactivate	# 'turn off' the virtualenv
 virtualenv venv2
 source venv2/bin/activate
 
@@ -72,9 +74,10 @@ source venv2/bin/activate
 pip install flask==0.12.2
 ```
 
+now you can have two different [Flask](https://readthedocs.org/projects/flask/) apps running
 
 ### Python3
-For Python >3.6, module [venv](https://docs.python.org/3/library/venv.html#module-venv) is built in
+For Python >3.6, a new module [venv](https://docs.python.org/3/library/venv.html#module-venv) is built in
 ```sh
 python3 -m venv new-venv
 
@@ -85,3 +88,9 @@ pip --version	# pip and python symlinked to py3
 ls new-venv/bin
 ```
 Works the same as virtualenv for Python 2 :)
+
+### Cleanup
+Just `rm -rf` the directory when you're finished with the virtual environment
+
+### Other notes
+[Tox](https://tox.readthedocs.io/en/latest/) can be used to manage multive **versions** of Python (i.e. 2.6 and 2.7)
