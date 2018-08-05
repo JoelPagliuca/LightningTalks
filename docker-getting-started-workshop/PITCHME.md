@@ -16,7 +16,7 @@ Note:
 
 ---
 
-### @fs[compass] Intro
+### @fs[child] Intro
 * Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
