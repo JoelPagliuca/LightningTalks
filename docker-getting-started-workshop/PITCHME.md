@@ -16,7 +16,7 @@ Note:
 
 ---
 
-### @fs[docker](Intro)
+### @fs[rocket](Intro)
 * Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
@@ -25,20 +25,20 @@ Note:
 
 ### @fa[play-circle](`docker run -it alpine:3.7`)
 
-@snap[west]
 ```sh
 $ whoami
 $ uname -a
 $ cat /etc/alpine-release
 $ exit
 ```
-@snapend
 
-@snap[east]
++++
+
 ```sh
 > root
 > Linux ...
 > 3.6.2
 # your terminal
 ```
-@snapend
+
+---
