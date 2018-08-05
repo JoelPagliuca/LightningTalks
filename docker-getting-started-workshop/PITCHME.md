@@ -56,3 +56,33 @@ Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 * Run it:
 	* `docker run -d --rm -p 7070:80 nginx` @note[or do.sh]
 @ulend
+
+---
+
+### @fa[search-plus] What happened here?
+
+* `docker run nginx`
+	* create a container based on the `nginx` image and run it
+	* if `nginx` is not on the machine it will be downloaded
+* `-d`
+	* background
+	* use `-it` to run with interactive output
+* `--rm`
+	* remove container after we stop it
+	* otherwise it clutters up your machine a bit
+* `-p 7070:80`
+	* map the host port *7070* to the container port *80*
+
+---
+
+### @fa[info-circle] More commands
+
+* `docker ps`
+	* check status of your containers
+	* `-a` will give you all the stopped containers as well
+* `docker stop <container_id/name>`
+	* stop a container
+* `docker rm <container_id/name>`
+	* remove container
+* `docker rmi <image_id/name>`
+	* remove image
