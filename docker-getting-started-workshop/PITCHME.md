@@ -2,7 +2,7 @@
 
 ---
 
-### @fa[laptop](Prep)
+### @fa[laptop] Prep
 Get @color[#0DB7ED](`docker`) +  @color[#0DB7ED](`docker-compose`) on your machine
 
 * Download this [minimal Linux VM](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-lsilogic-hw11-2.0-304b817.ova) that includes Docker
@@ -16,7 +16,7 @@ Note:
 
 ---
 
-### @fs[rocket](Intro)
+### @fs[rocket] Intro
 * Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
