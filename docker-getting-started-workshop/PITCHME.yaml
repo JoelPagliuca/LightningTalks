@@ -1,3 +1,4 @@
 theme : black
 theme-override : theme.css
 footnote : "Joel Pagliuca"
+layout : top-left
