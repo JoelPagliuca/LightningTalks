@@ -65,7 +65,7 @@ More commands
 
 # 2 - Django app
 
-Lets build a container for the Django app in `./2-django/`
+Let's build a container for the Django app in `./2-django/`
 
 * Make a Dockerfile in that directory
 * Common directives

@@ -2,7 +2,7 @@
 
 ---
 
-### @fa[laptop] Prep
+## @fa[laptop] Prep
 Get @color[#0DB7ED](`docker`) +  @color[#0DB7ED](`docker-compose`) on your machine
 
 * Download this [minimal Linux VM](http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-lsilogic-hw11-2.0-304b817.ova) that includes Docker
@@ -16,7 +16,7 @@ Note:
 
 ---
 
-### @fa[rocket] Intro
+## @fa[rocket] Intro
 Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
@@ -43,11 +43,11 @@ $ exit
 
 ---
 
-### @fa[code] Static html server
+## @fa[code] Static html server
 
 Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 
-@ul
+@ol
 * There's an Nginx image [available](https://hub.docker.com/_/nginx/) @note[The Dockerhub page usually includes downloading and running instructions]
 * Download it using:
 	* `docker pull nginx`
@@ -55,28 +55,29 @@ Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 	* `docker images`
 * Run it:
 	* `docker run -d --rm -p 7070:80 nginx` @note[or do.sh]
-@ulend
+@olend
 
 ---
 
 ### @fa[search-plus] What happened here?
 
+@ul
 * `docker run nginx`
-	* create a container based on the `nginx` image and run it
-	* if `nginx` is not on the machine it will be downloaded
+	* create a container based on the `nginx` image and run it @note[if `nginx` is not on the machine it will be downloaded]
 * `-d`
 	* background
 	* use `-it` to run with interactive output
 * `--rm`
-	* remove container after we stop it
-	* otherwise it clutters up your machine a bit
+	* remove container after we stop it @note[otherwise it clutters up your machine a bit]
 * `-p 7070:80`
 	* map the host port *7070* to the container port *80*
+@ulend
 
 ---
 
 ### @fa[info-circle] More commands
 
+@ul
 * `docker ps`
 	* check status of your containers
 	* `-a` will give you all the stopped containers as well
@@ -86,3 +87,41 @@ Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 	* remove container
 * `docker rmi <image_id/name>`
 	* remove image
+@ulend
+
+---
+
+## @fa[code] Django app
+
+Let's build a container for the Django app in `./2-django/`
+
++++
+
+### The Dockerfile @fa[trademark]
+
+* Make a Dockerfile in that directory
+* Common directives
+	* `FROM <base_image>`
+		* chose a starting point
+	* `ADD <host_directory> <container_directory>`
+		* add files from the host to the container
+	* `RUN <command>`
+		* run a command within the image
+	* `CMD ["cmd", "arg"]`
+		* set the instruction that's run when you do `docker run`
+* What we need for our Docker image
+	* A [base image](https://hub.docker.com/_/python/)
+		* `FROM python:alpine3.7`
+	* The Django code from that directory
+		* `ADD ./mysite /app`
+	* Django itself
+		* `RUN pip install django`
+	* The instructions to run the server
+		* `CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8080"]`
+* Now build our image
+	* `docker build -t django-test-workshop .`
+	* `-t` names the image
+	* `.` gives the path to build from
+* Let's run a container with our image
+	* `docker run -it -p 8080:8080 django-test-workshop`
+* Visit [127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
