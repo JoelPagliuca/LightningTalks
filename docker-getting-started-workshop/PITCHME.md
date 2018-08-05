@@ -25,18 +25,20 @@ Note:
 
 ### @fa[play-circle](`docker run -it alpine:3.7`)
 
-@ul
 @snap[west]
-- `$ whoami`
-- `$ uname -a`
-- `$ cat /etc/alpine-release`
-- `$ exit`
+```sh
+$ whoami
+$ uname -a
+$ cat /etc/alpine-release
+$ exit
+```
 @snapend
 
 @snap[east]
-- `> root`
-- `> Linux ...`
-- `> 3.6.2`
-- ``
+```sh
+> root
+> Linux ...
+> 3.6.2
+# your terminal
+```
 @snapend
-@ulend
