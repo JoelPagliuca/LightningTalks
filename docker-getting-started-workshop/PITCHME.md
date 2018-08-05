@@ -11,3 +11,20 @@ Either:
 * Download and install from [Docker website](https://docs.docker.com/docker-for-mac/install/)
 
 ---
+
+## Intro
+* Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
+![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
+* `docker run -it alpine:3.7`
+
+---
+
+```sh
+$ whoami
+# root
+$ uname -a
+# Linux ...
+$ cat /etc/alpine-release
+# 3.6.2
+$ exit
+```
