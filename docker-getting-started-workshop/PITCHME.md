@@ -57,6 +57,10 @@ Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 	* `docker run -d --rm -p 7070:80 nginx` @note[or do.sh]
 @olend
 
+Note:
+
+- run the do.sh for custom landing page
+
 ---
 
 ### @fa[search-plus] What happened here?
@@ -99,27 +103,46 @@ Let's build a container for the Django app in `./2-django/`
 
 ### The Dockerfile @fa[trademark]
 
-* Make a Dockerfile in that directory
-* Common directives
-	* `FROM <base_image>`
-		* chose a starting point
-	* `ADD <host_directory> <container_directory>`
-		* add files from the host to the container
-	* `RUN <command>`
-		* run a command within the image
-	* `CMD ["cmd", "arg"]`
-		* set the instruction that's run when you do `docker run`
+Common directives
+
+* `FROM <base_image>`
+	* chose a starting point
+* `ADD <host_directory> <container_directory>`
+	* add files from the host to the container
+* `RUN <command>`
+	* run a command within the image
+* `CMD ["cmd", "arg"]`
+	* set the instruction that's run when you do `docker run`
+
+---
+
+### The Dockerfile @fa[trademark]
+
+@ol
+
+* Make a Dockerfile in `2-django` directory
 * What we need for our Docker image
 	* A [base image](https://hub.docker.com/_/python/)
-		* `FROM python:alpine3.7`
 	* The Django code from that directory
-		* `ADD ./mysite /app`
 	* Django itself
-		* `RUN pip install django`
 	* The instructions to run the server
-		* `CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8080"]`
-* Now build our image
-	* `docker build -t django-test-workshop .`
+
+@olend
+
++++
+
+### The Dockerfile @fa[trademark]
+
+* `FROM python:alpine3.7`
+* `ADD ./mysite /app`
+* `RUN pip install django`
+* `CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8080"]`
+
+---
+
+### @fa[wrench] `docker build`
+
+* `docker build -t django-test-workshop .`
 	* `-t` names the image
 	* `.` gives the path to build from
 * Let's run a container with our image
