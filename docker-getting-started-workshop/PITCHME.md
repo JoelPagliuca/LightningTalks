@@ -106,13 +106,16 @@ Let's build a container for the Django app in `./2-django/`
 Common directives
 
 * `FROM <base_image>`
-	* chose a starting point
 * `ADD <host_directory> <container_directory>`
-	* add files from the host to the container
 * `RUN <command>`
-	* run a command within the image
 * `CMD ["cmd", "arg"]`
-	* set the instruction that's run when you do `docker run`
+
+Note:
+
+* chose a starting point
+* add files from the host to the container
+* run a command within the image
+* set the instruction that's run when you do `docker run`
 
 ---
 
