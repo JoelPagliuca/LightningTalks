@@ -132,18 +132,17 @@ Note:
 
 @olend
 
-+++
++++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=dockerfile&color=#1E1F21&title=Dockerfile
 
-### The Dockerfile @fa[trademark]
-
-* `FROM python:alpine3.7`
-* `ADD ./mysite /app`
-* `RUN pip install django`
-* `CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8080"]`
+@[1]
+@[2]
+@[3]
+@[4]
+@[5]
 
 ---
 
-### @fa[wrench] `docker build`
+### @fa[wrench](`docker build`)
 
 * `docker build -t django-test-workshop .`
 	* `-t` names the image
