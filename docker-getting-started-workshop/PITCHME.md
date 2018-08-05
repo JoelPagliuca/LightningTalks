@@ -32,8 +32,6 @@ $ cat /etc/alpine-release
 $ exit
 ```
 
-+++
-
 ```sh
 > root
 > Linux ...
@@ -42,3 +40,5 @@ $ exit
 ```
 
 ---
+
+### 1 - Static html server
