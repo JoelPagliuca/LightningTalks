@@ -16,7 +16,7 @@ Note:
 
 ---
 
-### @fs[rocket] Intro
+### @fs[compass] Intro
 * Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
@@ -24,6 +24,8 @@ Note:
 ---
 
 ### @fa[play-circle](`docker run -it alpine:3.7`)
+
+Let's play with a @color[#0DB7ED](docker) container.
 
 ```sh
 $ whoami
@@ -41,4 +43,17 @@ $ exit
 
 ---
 
-### 1 - Static html server
+### @fa[code] 1 - Static html server
+
+Let's serve a html file. (`cd 1-static-html`)
+
+@ul
+* There's an Nginx image [available](https://hub.docker.com/_/nginx/)
+	* The Dockerhub page usually includes downloading and running instructions
+* Download it using:
+	* `docker pull nginx`
+* See it on your machine:
+	* `docker images`
+* Run it:
+	* `docker run -d --rm -p 7070:80 nginx`
+@ulend
