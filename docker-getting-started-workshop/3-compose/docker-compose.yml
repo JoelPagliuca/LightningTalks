@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  client:
+    container_name: compose-demo-client
+    build: .
+    command: /client.sh
+    networks:
+      # - demo
+      demo:
+        aliases: 
+          - "demo-client"
+    depends_on:
+      - server
+  server:
+    container_name: compose-demo-server
+    build: .
+    command: /server.sh
+    networks:
+      demo:
+        aliases: 
+          - "demo-server"
+
+networks:
+  demo:
+    internal: true
