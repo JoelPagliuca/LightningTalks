@@ -171,7 +171,7 @@ Note: ADD preffered over COPY because ADD can be a URL
 
 * Basically a docker wrapper
 * Good for multi-container setups
-* Reads in a file - `docker-compose.yml`
+* Reads in a file `docker-compose.yml`
 
 @ulend
 
@@ -201,3 +201,5 @@ compose-demo-server | Message from client
 Killing compose-demo-client  ... done
 Killing compose-demo-server  ... done
 ```
+
+@[2](something)
