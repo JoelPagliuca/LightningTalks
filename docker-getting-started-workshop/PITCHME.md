@@ -154,7 +154,7 @@ Note: ADD preffered over COPY because ADD can be a URL
 
 ---
 
-### @fa[wrench](`docker build`)
+### @fa[code](`docker build`)
 
 * `docker build -t django-test-workshop .`
 	* `-t` names the image
@@ -162,3 +162,42 @@ Note: ADD preffered over COPY because ADD can be a URL
 * Let's run a container with our image
 	* `docker run -it -p 8080:8080 django-test-workshop`
 * Visit [127.0.0.1:8080/demo](http://127.0.0.1:8080/demo)
+
+---
+
+## @fa[wrench] Docker-compose
+
+@ul
+
+* Basically a docker wrapper
+* Good for multi-container setups
+* Reads in a file - `docker-compose.yml`
+
+@ulend
+
+---
+
+### @fa[code] Run the client-server containers
+
+* There's a compose example in `3-compose`
+* `cd` in and run `docker-compose up`
+* Look at the output
+
++++
+
+### @fa[search-plus] What happened here?
+
+```
+Creating compose-demo-server ... done
+Creating compose-demo-client ... done
+Attaching to compose-demo-server, compose-demo-client
+compose-demo-server | Listening on [0.0.0.0] (family 0, port 8080)
+compose-demo-client | Sending message to server
+compose-demo-server | Connection from 172.18.0.3 36542 received!
+compose-demo-server | Message from client
+compose-demo-client | Sending message to server
+compose-demo-server | Connection from 172.18.0.3 36544 received!
+compose-demo-server | Message from client
+Killing compose-demo-client  ... done
+Killing compose-demo-server  ... done
+```
