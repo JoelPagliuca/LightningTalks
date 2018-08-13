@@ -208,7 +208,7 @@ Killing compose-demo-server  ... done
 ---?code=docker-getting-started-workshop/3-compose/docker-compose.yml&lang=yaml&title=docker-compose.yml
 
 @[1]
-@[3, 23]
+@[3,23]
 @[3-21](containers)
 @[23-25](internal network)
 @[4-14]
