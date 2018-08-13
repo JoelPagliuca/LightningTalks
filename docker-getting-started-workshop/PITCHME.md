@@ -10,9 +10,7 @@ Get @color[#0DB7ED](`docker`) +  @color[#0DB7ED](`docker-compose`) on your machi
 OR
 * Download and install from [Docker website](https://docs.docker.com/docker-for-mac/install/)
 
-Note:
-
-- aufs - a union file system
+Note: aufs - a union file system
 
 ---
 
@@ -41,10 +39,7 @@ $ exit
 # your terminal
 ```
 
-Note:
-
-- alpine is the repository/image
-- 3.7 is the tag
+Note: alpine is the repository/image, 3.7 is the tag
 
 ---
 
@@ -62,9 +57,7 @@ Let's serve a html file @fa[arrow-right] `cd 1-static-html`
 	* `docker run -d --rm -p 7070:80 nginx` @note[or do.sh]
 @olend
 
-Note:
-
-- run the do.sh for custom landing page
+Note: run the do.sh for custom landing page
 
 ---
 
@@ -114,18 +107,12 @@ We'll need a @color[#0DB7ED](Dockerfile) @fa[trademark]
 
 Common directives
 
-* `FROM <starting_image>`
-* `ADD <host_directory> <container_directory>`
-* `RUN <command>`
-* `CMD ["cmd", "arg"]`
-
-Note:
-
-* choose a starting point
-* add files from the host to the container
-* run a command within the image
-* set the instruction that's run when you do `docker run`
-* in exec form
+@ul
+* `FROM <starting_image>` @note[choose a starting point]
+* `ADD <host_directory> <container_directory>` @note[add files from the host to the container]
+* `RUN <command>` @note[run a command within the image]
+* `CMD ["cmd", "arg"]` @note[set the instruction that's run when you do `docker run`]
+@ulend
 
 ---
 
@@ -159,12 +146,11 @@ Note:
 +++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=bash&title=Dockerfile
 
 @[1](python alpine is pretty lightweight)
-
-@[2](copy the files into the container, preferred over COPY because you can use a URL)
-
+@[2](copy the files into the container)
 @[3](install Python-django)
-
 @[4](run the server)
+
+Note: ADD preffered over COPY because ADD can be a URL
 
 ---
 
