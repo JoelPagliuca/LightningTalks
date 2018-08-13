@@ -156,7 +156,7 @@ Note:
 
 @olend
 
-+++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=dockerfile&title=Dockerfile
++++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=bash&title=Dockerfile
 
 @[1](python alpine is pretty lightweight)
 
