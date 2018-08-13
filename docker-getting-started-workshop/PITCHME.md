@@ -212,6 +212,12 @@ Killing compose-demo-server  ... done
 @[3-21](containers)
 @[23-25](internal network)
 @[4-14]
+@[15-21]
+@[5]
+@[6]
+@[7]
+@[8-11]
+@[12-13]
 
 ---
 

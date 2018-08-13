@@ -6,7 +6,6 @@ services:
     build: .
     command: /client.sh
     networks:
-      # - demo
       demo:
         aliases: 
           - "demo-client"
