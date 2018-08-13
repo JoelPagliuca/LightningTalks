@@ -41,6 +41,11 @@ $ exit
 # your terminal
 ```
 
+Note:
+
+- alpine is the repository/image
+- 3.7 is the tag
+
 ---
 
 ## @fa[code] Static html server
@@ -99,46 +104,61 @@ Note:
 
 Let's build a container for the Django app in `./2-django/`
 
+We'll need a @color[#0DB7ED](Dockerfile) @fa[trademark]
+
 +++
 
-### The Dockerfile @fa[trademark]
+### @fa[file] The Dockerfile
 
 Common directives
 
-* `FROM <base_image>`
+* `FROM <starting_image>`
 * `ADD <host_directory> <container_directory>`
 * `RUN <command>`
 * `CMD ["cmd", "arg"]`
 
 Note:
 
-* chose a starting point
+* choose a starting point
 * add files from the host to the container
 * run a command within the image
 * set the instruction that's run when you do `docker run`
 
 ---
 
-### The Dockerfile @fa[trademark]
+### @fa[file] The Dockerfile
+
+@ul
+
+* These directives provision a server for you
+* Our server needs:
+	* Python3
+	* The code (`mysite`)
+	* Django (`pip install django`)
+
+@ulend
+
+---
+
+### @fa[code] The Dockerfile
 
 @ol
 
-* Make a Dockerfile in `2-django` directory
-* What we need for our Docker image
+* Make a Dockerfile in `2-django`
+* What we need for our image
 	* A [base image](https://hub.docker.com/_/python/)
-	* The Django code from that directory
+	* The Django code from `mysite`
 	* Django itself
-	* The instructions to run the server
+	* The command to run the server
 
 @olend
 
-+++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=dockerfile&color=#1E1F21&title=Dockerfile
++++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=dockerfile&title=Dockerfile
 
-@[1]
-@[2]
-@[3]
-@[4]
-@[5]
+@[1](python alpine is pretty lightweight)
+@[2](copy the files into the container, preferred over COPY because you can use a URL)
+@[3](install Python-django)
+@[4](run the server)
 
 ---
 
