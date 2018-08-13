@@ -102,7 +102,9 @@ Note:
 
 ## @fa[code] Django app
 
-Let's build a container for the Django app in `./2-django/`
+Let's build a container for the Django app in 
+
+`./2-django/`
 
 We'll need a @color[#0DB7ED](Dockerfile) @fa[trademark]
 
@@ -123,6 +125,7 @@ Note:
 * add files from the host to the container
 * run a command within the image
 * set the instruction that's run when you do `docker run`
+* in exec form
 
 ---
 
@@ -156,8 +159,11 @@ Note:
 +++?code=docker-getting-started-workshop/2-django/Dockerfile.bkp&lang=dockerfile&title=Dockerfile
 
 @[1](python alpine is pretty lightweight)
+
 @[2](copy the files into the container, preferred over COPY because you can use a URL)
+
 @[3](install Python-django)
+
 @[4](run the server)
 
 ---
