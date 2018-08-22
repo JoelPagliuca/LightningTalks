@@ -10,9 +10,7 @@ Get @color[#0DB7ED](`docker`) +  @color[#0DB7ED](`docker-compose`) on your machi
 OR
 * Download and install from [Docker website](https://docs.docker.com/docker-for-mac/install/)
 
-Clone [this](https://github.com/joelpagliuca/lightningtalks) repo
-
-Note: aufs - a union file system
+Clone [this](https://github.com/joelpagliuca/lightningtalks) repo for the content
 
 ---
 
@@ -41,6 +39,8 @@ Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/st
 
 ![Images and Containers](docker-getting-started-workshop/assets/images/container-layers.jpg)
 
+Note: aufs - a union file system
+
 ---
 
 ### @fa[play-circle](`docker run -it alpine:3.7`)
@@ -48,17 +48,10 @@ Images vs Containers - [docs](https://docs.docker.com/v17.09/engine/userguide/st
 Let's play with a @color[#0DB7ED](docker) container.
 
 ```sh
-$ whoami
-$ uname -a
-$ cat /etc/alpine-release
-$ exit
-```
-
-```sh
-> root
-> Linux ...
-> 3.6.2
-# your terminal
+whoami
+uname -a
+cat /etc/alpine-release
+exit
 ```
 
 Note: alpine is the repository/image, 3.7 is the tag
@@ -244,6 +237,8 @@ Killing compose-demo-server  ... done
 @[12-13]
 @[14,17,21]
 
+Note: get them to open the file up as well
+
 ---
 
 ## @fa[wrench] Dockerized tools
@@ -264,3 +259,15 @@ Killing compose-demo-server  ... done
 	* THIS WILL SERVER THE DIRECTORY OVER HTTP
 
 Note: I trust these images
+
+---
+
+## @fa[search-plus] Where to go from here?
+
+@ul
+* networking
+* volumes
+* build web apps
+* distribute malware
+* run other people's tools
+@ulend
