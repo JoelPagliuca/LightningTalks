@@ -10,7 +10,21 @@ Get @color[#0DB7ED](`docker`) +  @color[#0DB7ED](`docker-compose`) on your machi
 OR
 * Download and install from [Docker website](https://docs.docker.com/docker-for-mac/install/)
 
+Clone [this](https://github.com/joelpagliuca/lightningtalks) repo
+
 Note: aufs - a union file system
+
+---
+
+@snap[midpoint]
+# @size[3em](@fa[bolt]Value@fa[bolt])
+@snapend
+
+Note: Debug, Annecdotes, Direction, Plant the seed
+
+---
+
+## @fa[book] 
 
 ---
 
