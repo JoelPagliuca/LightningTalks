@@ -17,7 +17,7 @@ Note: aufs - a union file system
 ---
 
 @snap[midpoint]
-# @size[3em](@fa[bolt]Value@fa[bolt])
+@size[3.5em](@fa[bolt] VALUE @fa[bolt])
 @snapend
 
 Note: Debug, Annecdotes, Direction, Plant the seed
