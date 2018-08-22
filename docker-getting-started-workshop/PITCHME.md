@@ -17,14 +17,22 @@ Note: aufs - a union file system
 ---
 
 @snap[midpoint]
-@size[3.5em](@fa[bolt]VALUE@fa[bolt])
+@size[4em](VALUE)
 @snapend
 
-Note: Debug, Annecdotes, Direction, Plant the seed
+Note: Debug, Annecdotes, Direction, Plant the seed, mistakes
 
 ---
 
-## @fa[book] 
+## @fa[book] What we are actually doing
+
+@ul
+* @fa[code] Run a container
+* @fa[code] Static html server
+* @fa[code] Django app
+* @fa[code] Multi-container setup
+* @fa[code] Play with prebuilt stuff
+@ulend
 
 ---
 
@@ -114,6 +122,8 @@ Let's build a container for the Django app in
 `./2-django/`
 
 We'll need a @color[#0DB7ED](Dockerfile) @fa[trademark]
+
+Note: talk about Vagrant setup
 
 +++
 
@@ -241,3 +251,16 @@ Killing compose-demo-server  ... done
 * [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
 * [Jenkins](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+with+Docker)
 * [Nmap](https://hub.docker.com/r/frapsoft/nmap/)
+* [Red-docker](https://github.com/nov3mb3r/red-docker)
+* [httpd](https://hub.docker.com/_/httpd/)
+
+---
+
+## @fa[code] Run some prebuilt stuff
+
+* `docker run frapsoft/nmap`
+* `docker run -dit -p 8080:80 -v "<a_directory>:/usr/local/apache2/htdocs/ httpd:2.4`
+	* `-v` map a directory from your host to the container
+	* THIS WILL SERVER THE DIRECTORY OVER HTTP
+
+Note: I trust these images
