@@ -2,12 +2,12 @@
 
 ---
 
-## @fa[book] Background
+## @fa[book](Background)
 ![diagram](xxe-aws-compromise/assets/diagram1.png)
 
 ---
 
-## @fa[code] XML Entities
+## @fa[code](XML Entities)
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
@@ -17,5 +17,5 @@
 
 ---
 
-## @fa[file-signature] Pentest Report
+## @fa[file-signature](Pentest Report)
 ![diagram](xxe-aws-compromise/assets/vuln1.png)
