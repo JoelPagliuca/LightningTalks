@@ -17,5 +17,5 @@
 
 ---
 
-## @fa[bug] Pentest Report
+## @fa[file-signature] Pentest Report
 ![diagram](xxe-aws-compromise/assets/vuln1.png)
