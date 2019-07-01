@@ -45,7 +45,7 @@
 
 ---
 
-## @fas[terminal](Metadata response)
+## @fa[terminal](Metadata response)
 ```json
 {
   "Code" : "Success",
