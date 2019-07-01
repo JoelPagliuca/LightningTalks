@@ -42,3 +42,25 @@
 
 ## @fa[file-signature](Pentest Report)
 ![diagram](xxe-aws-compromise/assets/vuln2.png)
+
+---
+
+## @fas[terminal](Metadata response)
+```json
+{
+  "Code" : "Success",
+  "LastUpdated" : "2019-07-01T12:11:43Z",
+  "Type" : "AWS-HMAC",
+  "AccessKeyId" : "AKIAIOSFODNN7EXAMPLE",
+  "SecretAccessKey" : "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "Token" : "************",
+  "Expiration" : "2019-07-01T18:46:08Z"
+}
+```
+
+---
+
+## @fa[file-signature](Pentest Report)
+![diagram](xxe-aws-compromise/assets/vuln3.png)
+
+---
