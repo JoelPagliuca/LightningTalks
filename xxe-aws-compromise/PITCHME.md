@@ -45,7 +45,7 @@
 
 ---
 
-## @fa[terminal](Metadata response)
+## @fa[terminal](Metadata)
 ```json
 {
   "Code" : "Success",
@@ -64,3 +64,6 @@
 ![diagram](xxe-aws-compromise/assets/vuln3.png)
 
 ---
+
+## @fa[search-plus](Summary)
+![stop it](https://media.giphy.com/media/l4Ki2obCyAQS5WhFe/giphy.gif)
