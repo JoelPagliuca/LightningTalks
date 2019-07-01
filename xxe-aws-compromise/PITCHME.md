@@ -65,5 +65,5 @@
 
 ---
 
-## @fa[search-plus](Summary)
+## @fa[book](Summary)
 ![stop it](https://media.giphy.com/media/l4Ki2obCyAQS5WhFe/giphy.gif)
