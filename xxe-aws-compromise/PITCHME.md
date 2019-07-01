@@ -36,6 +36,8 @@
 <foo>&xxe;</foo>
 ```
 
+`http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2-iam-role`
+
 ---
 
 ## @fa[file-signature](Pentest Report)
