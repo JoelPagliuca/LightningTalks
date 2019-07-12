@@ -2,7 +2,7 @@
 
 ---
 
-## @fa[book](Background)
+## @fa[book] Background
 ![diagram](xxe-aws-compromise/assets/diagram1.png)
 
 ---
