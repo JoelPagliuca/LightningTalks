@@ -7,7 +7,7 @@
 
 ---
 
-## @fa[code](XML Entities)
+## @fa[code] XML Entities
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
@@ -20,12 +20,12 @@
 
 ---
 
-## @fa[file-signature](Pentest Report)
+## @fa[file-signature] Pentest Report
 ![diagram](xxe-aws-compromise/assets/vuln1.png)
 
 ---
 
-## @fab[aws](AWS Metadata)
+## @fab[aws] AWS Metadata
 ```xml
  <?xml version="1.0" encoding="ISO-8859-1"?>
  <!DOCTYPE foo [  
@@ -40,12 +40,12 @@
 
 ---
 
-## @fa[file-signature](Pentest Report)
+## @fa[file-signature] Pentest Report
 ![diagram](xxe-aws-compromise/assets/vuln2.png)
 
 ---
 
-## @fa[terminal](Metadata)
+## @fa[terminal] Metadata
 ```json
 {
   "Code" : "Success",
@@ -60,10 +60,10 @@
 
 ---
 
-## @fa[file-signature](Pentest Report)
+## @fa[file-signature]Pentest Report
 ![diagram](xxe-aws-compromise/assets/vuln3.png)
 
 ---
 
-## @fa[book](Summary)
+## @fa[book] Summary
 ![stop it](https://media.giphy.com/media/l4Ki2obCyAQS5WhFe/giphy.gif)
